@@ -1,0 +1,62 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">
+                    <img [src]="LOGO" alt="Detel logo" class="logo">
+                </a>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="font-size" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li>
+            <a class="font-size" routerLink="create-user" routerLinkActive="active">Create user</a></li>
+          <li>
+            <a class="font-size" routerLink="block-deblock" routerLinkActive="active">Block/Deblock</a>
+          </li>
+          <li>
+            <a class="font-size" routerLink="paid-not-paid" routerLinkActive="active">Paid/Not Paid</a>
+          </li>
+          <li>
+            <a class="font-size" routerLink="contact" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
+<style>
+  .active {
+    color: #fa6f06 !important;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .navbar-brand {
+    padding: 0px;
+  }
+
+  .navbar-brand>img {
+    height: 100%;
+    padding: 5px;
+    width: auto;
+  }
+
+  .font-size {
+    font-size: 20px;
+    margin-left: 50px;
+  }
+
+</style>

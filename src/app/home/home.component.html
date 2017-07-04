@@ -1,0 +1,37 @@
+<div style="text-align:center">
+  <h1 class="title">
+    Welcome to Detel App!
+  </h1>
+  <img [src]="LOGOMID" alt="Detel logo" class="logo-mid">
+  <p class="top"> Visit our webpage: <a href="https://www.detel.rs" target="_blank">www.detel.rs</a></p>
+
+  <form (ngSubmit)="login(f)" #f="ngForm">
+    <label for="userName">User name</label>
+    <input 
+    type="text"
+    [(ngModel)]="userName"
+    name="userName"
+    >
+
+    <label for="password">Password</label>
+    <input type="text">
+    <button type="submit">Login</button>
+  </form>
+  <button (click)="sendRequestAuthentication()"> LOGIN </button>
+</div>
+
+
+
+<style>
+  .logo-mid {
+    width: 250px;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: 30px;
+  }
+
+</style>

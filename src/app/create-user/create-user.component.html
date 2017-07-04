@@ -1,0 +1,183 @@
+<div class="container container1">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header center">Create user</h2>
+      <hr>
+    </div>
+    <form (ngSubmit)="createUser(f)" #f="ngForm">
+      <div class="col-xs-6">
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Name</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Name" 
+                  id="example-text-input" 
+                  [(ngModel)]="user.name" 
+                  name="name"
+                  required
+                 >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Address</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Address" 
+                  id="example-text-input"
+                  [(ngModel)]="user.address" 
+                  name="address">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Country code</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text"
+                  placeholder="Country code" 
+                  id="example-text-input" 
+                  pattern="^[1-9]+[0-9]*$"
+                  [(ngModel)]="user.countryCode" 
+                  name="countryCode"
+                  minlength="3"
+                  maxlength="3">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">City code</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="City code" 
+                  id="example-text-input"
+                  pattern="^[1-9]+[0-9]*$"
+                  [(ngModel)]="user.cityCode" 
+                  name="cityCode"
+                  minlength="3"
+                  maxlength="4">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Phone number</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Phone number" 
+                  id="example-text-input"
+                  [(ngModel)]="user.phoneNumber"
+                  name="phoneNumber"
+                  >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Location</label>
+          <div class="col-10">
+            <input class="form-control"
+                   type="text"
+                   placeholder="Location" 
+                   id="example-text-input" 
+                   [(ngModel)]="user.location"
+                   name="location">
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT SIDE -->
+      <div class="col-xs-6">
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Activation date</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Activation date" 
+                  id="example-text-input"
+                   [(ngModel)]="user.activationDate"
+                  name="activationDate"
+                  >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Device id</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Device id" 
+                  id="example-text-input"
+                   [(ngModel)]="user.deviceId"
+                  name="deviceId"
+                  >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Device id type</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Device id type" 
+                  id="example-text-input"
+                   [(ngModel)]="user.deviceIdType"
+                  name="deviceIdType"
+                  >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Packet</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Packet" 
+                  id="example-text-input"
+                   [(ngModel)]="user.packet"
+                  name="packet"
+                  >
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Customer id</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Customer id" 
+                  id="example-text-input" 
+                  [(ngModel)]="user.customerId"
+                  name="customerId">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label">Peer id</label>
+          <div class="col-10">
+            <input class="form-control" 
+                  type="text" 
+                  placeholder="Peer id" 
+                  id="example-text-input"
+                   [(ngModel)]="user.peerId"
+                  name="peerId"
+                  >
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary widthBtn" type="submit" [disabled]="!f.valid">CREATE USER</button>
+    </form>
+    <button class="btn btn-danger widthBtn" (click)="clearAll()">CLEAR ALL</button>
+    <button (click)="createUserRequest()">createUserRequest</button>
+  </div>
+
+</div>
+<style>
+  .widthBtn {
+    width: 150px !important;
+  }
+
+  .container1 {
+    width: 1000px;
+  }
+
+  .form-control {
+    width: 80%;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+</style>

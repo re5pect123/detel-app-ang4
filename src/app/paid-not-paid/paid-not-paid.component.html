@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header center">Paid / Not Paid</h2>
+      <hr>
+    </div>
+    <div class="col-lg-4 col-lg-offset-4">
+      <div class="input-group">
+        <h1>Not Paid:</h1>
+        <form (ngSubmit)="notPaid(f)" #f="ngForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="inputNumber" class="col-sm-2 control-label">Number: </label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control left newWidth" placeholder="Not paid">
+            </div>
+          </div>
+          <button class="btn btn-danger rightFloat customBtn">
+            Not paid
+          </button>
+        </form>
+      </div>
+      <hr>
+      <hr>
+      <div class="input-group">
+        <h1>Paid:</h1>
+        <form (ngSubmit)="paid(f)" #f="ngForm" class="form-horizontal">
+          <div class="form-group">
+            <label for="inputNumber" class="col-sm-2 control-label">Number: </label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control left newWidth" placeholder="Paid">
+            </div>
+          </div>
+          <button class="btn btn-success rightFloat customBtn">
+            Paid
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .customBtn {
+    width: 130px !important;
+  }
+
+  .left {
+    margin-left: 8%;
+  }
+
+  .rightFloat {
+    float: right;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .newWidth {
+    width: 92%;
+  }
+
+</style>
