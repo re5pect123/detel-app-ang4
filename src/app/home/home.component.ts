@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms/forms";
 import { LoginService } from "app/home/login.service";
+import { Observable } from "rxjs/Observable";
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +15,16 @@ export class HomeComponent implements OnInit {
   constructor(private loginService: LoginService) {
   }
 
-  ngOnInit() {
+  ngOnInit() {   
+
   }
 
 
   sendRequestAuthentication() {
     console.log('sendRequest')
-    this.loginService.testRequest()
+    this.loginService.testRequest();
   }
+
   login(form: NgForm) {
     console.log(form.value.userName)
   }
